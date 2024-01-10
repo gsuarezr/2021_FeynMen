@@ -78,21 +78,21 @@ def two_qubit_vqe(theta, basis,ansatzList):
     if basis == 'ZZ':
         circuit.measure(q, c)
     elif basis == 'XX':
-        circuit.u2(0, np.pi, q[0])
-        circuit.u2(0, np.pi, q[1])
+        circuit.u(np.pi/2,0, np.pi, q[0])
+        circuit.u(np.pi/2,0, np.pi, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'YY':
-        circuit.u2(0, np.pi/2, q[0])
-        circuit.u2(0, np.pi/2, q[1])
+        circuit.u(np.pi/2,0, np.pi/2, q[0])
+        circuit.u(np.pi/2,0, np.pi/2, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'IX':
-        circuit.u2(0, np.pi, q[1])
+        circuit.u(np.pi/2,0, np.pi, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'IY':
-        circuit.u2(0, np.pi/2, q[1])
+        circuit.u(np.pi/2,0, np.pi/2, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'IZ':
@@ -102,42 +102,42 @@ def two_qubit_vqe(theta, basis,ansatzList):
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'ZX':
-        circuit.u2(0, np.pi, q[1])
+        circuit.u(np.pi/2,0, np.pi, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'ZY':
-        circuit.u2(0, np.pi/2, q[1])
+        circuit.u(np.pi/2,0, np.pi/2, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'XI':
-        circuit.u2(0, np.pi, q[0])
+        circuit.u(np.pi/2,0, np.pi, q[0])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'XZ':
-        circuit.u2(0, np.pi, q[0])
+        circuit.u(np.pi/2,0, np.pi, q[0])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'XX':
-        circuit.u2(0, np.pi, q[0])
-        circuit.u2(0, np.pi, q[1])
+        circuit.u(np.pi/2,0, np.pi, q[0])
+        circuit.u(np.pi/2,0, np.pi, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'XY':
-        circuit.u2(0, np.pi, q[0])
-        circuit.u2(0, np.pi/2, q[1])
+        circuit.u(np.pi/2,0, np.pi, q[0])
+        circuit.u(np.pi/2,0, np.pi/2, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'YZ':
-        circuit.u2(0, np.pi/2, q[0])
+        circuit.u(np.pi/2,0, np.pi/2, q[0])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'YI':
-        circuit.u2(0, np.pi/2, q[0])
+        circuit.u(np.pi/2,0, np.pi/2, q[0])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     elif basis == 'YX':
-        circuit.u2(0, np.pi/2, q[0])
-        circuit.u2(0, np.pi, q[1])
+        circuit.u(np.pi/2,0, np.pi/2, q[0])
+        circuit.u(np.pi/2,0, np.pi, q[1])
         circuit.measure(q[0], c[0])
         circuit.measure(q[1], c[1])
     else:
